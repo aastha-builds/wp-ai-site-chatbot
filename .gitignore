@@ -1,0 +1,17 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Local WordPress created by bin/local-wp.sh
+/.wp/
+
+# Secrets and local settings
+.env
+.env.local
+
+# Tooling caches and logs
+.phpunit.result.cache
+.phpcs-cache
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,519 @@
+/* SiteSage Chat widget. Scoped under .ssc so theme styles do not leak in. */
+
+.ssc {
+	--ssc-brand: #0e7c86;
+	--ssc-on-brand: #ffffff;
+	--ssc-bg: #ffffff;
+	--ssc-text: #1d2327;
+	--ssc-muted: #5f6b76;
+	--ssc-line: #e3e7eb;
+	--ssc-bot-bg: #f2f5f7;
+	--ssc-radius: 16px;
+	--ssc-shadow: 0 12px 40px rgba(16, 24, 40, 0.18);
+
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 99999;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.45;
+	color: var(--ssc-text);
+	text-align: left;
+}
+
+.ssc *,
+.ssc *::before,
+.ssc *::after {
+	box-sizing: border-box;
+}
+
+.ssc button,
+.ssc input,
+.ssc textarea {
+	font: inherit;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.ssc svg {
+	width: 22px;
+	height: 22px;
+	fill: currentColor;
+	flex: none;
+}
+
+.ssc-sr {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.ssc :focus-visible {
+	outline: 3px solid var(--ssc-brand);
+	outline-offset: 2px;
+}
+
+/* Launcher bubble */
+.ssc-launcher {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin: 0 0 0 auto;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+	box-shadow: var(--ssc-shadow);
+	cursor: pointer;
+	transition: transform 0.15s ease;
+}
+
+.ssc-launcher:hover {
+	transform: scale(1.05);
+}
+
+.ssc-launcher:focus-visible {
+	outline-color: var(--ssc-text);
+}
+
+.ssc-launcher svg {
+	width: 28px;
+	height: 28px;
+}
+
+/* Panel */
+.ssc-panel {
+	display: flex;
+	flex-direction: column;
+	width: 370px;
+	height: min(600px, calc(100vh - 110px));
+	margin-bottom: 14px;
+	overflow: hidden;
+	background: var(--ssc-bg);
+	border: 1px solid var(--ssc-line);
+	border-radius: var(--ssc-radius);
+	box-shadow: var(--ssc-shadow);
+	animation: ssc-in 0.18s ease-out;
+}
+
+.ssc-panel[hidden] {
+	display: none;
+}
+
+@keyframes ssc-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.ssc-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 14px 14px 14px 16px;
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+}
+
+.ssc-avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.ssc-avatar svg {
+	width: 18px;
+	height: 18px;
+}
+
+.ssc-title {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+}
+
+.ssc-title strong {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.ssc-subtitle {
+	font-size: 12px;
+	opacity: 0.85;
+}
+
+.ssc-badge {
+	align-self: flex-start;
+	margin-top: 2px;
+	padding: 1px 8px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.22);
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.ssc-close {
+	display: flex;
+	padding: 6px;
+	border: 0;
+	border-radius: 8px;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+.ssc-close:hover {
+	background: rgba(255, 255, 255, 0.18);
+}
+
+.ssc-close:focus-visible {
+	outline-color: var(--ssc-on-brand);
+}
+
+/* Messages */
+.ssc-log {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	gap: 10px;
+	padding: 16px;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+}
+
+.ssc-msg {
+	max-width: 85%;
+	padding: 10px 13px;
+	border-radius: 14px;
+	word-wrap: break-word;
+	overflow-wrap: anywhere;
+}
+
+.ssc-msg--bot {
+	align-self: flex-start;
+	background: var(--ssc-bot-bg);
+	border-bottom-left-radius: 4px;
+}
+
+.ssc-msg--user {
+	align-self: flex-end;
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+	border-bottom-right-radius: 4px;
+	white-space: pre-wrap;
+}
+
+.ssc-msg a {
+	color: var(--ssc-brand);
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.ssc-sources-wrap {
+	margin-top: 8px;
+	padding-top: 8px;
+	border-top: 1px solid var(--ssc-line);
+	font-size: 13px;
+}
+
+.ssc-sources-label {
+	display: block;
+	margin-bottom: 2px;
+	color: var(--ssc-muted);
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.ssc-sources {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ssc-sources li {
+	margin: 2px 0;
+	padding: 0;
+}
+
+.ssc-sources li::before {
+	content: "↗ ";
+	color: var(--ssc-muted);
+}
+
+/* Suggestions */
+.ssc-suggestions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.ssc-chip {
+	padding: 6px 11px;
+	border: 1px solid var(--ssc-brand);
+	border-radius: 999px;
+	background: var(--ssc-bg);
+	color: var(--ssc-brand);
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.ssc-chip:hover {
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+}
+
+/* Typing indicator */
+.ssc-dots {
+	display: inline-flex;
+	gap: 4px;
+	padding: 4px 0;
+}
+
+.ssc-dots span {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--ssc-muted);
+	animation: ssc-bounce 1.2s infinite ease-in-out;
+}
+
+.ssc-dots span:nth-child(2) {
+	animation-delay: 0.15s;
+}
+
+.ssc-dots span:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+@keyframes ssc-bounce {
+	0%,
+	60%,
+	100% {
+		opacity: 0.35;
+		transform: translateY(0);
+	}
+	30% {
+		opacity: 1;
+		transform: translateY(-4px);
+	}
+}
+
+/* Lead form */
+.ssc-msg--form {
+	width: 100%;
+	max-width: 100%;
+	background: var(--ssc-bg);
+	border: 1px solid var(--ssc-line);
+	border-radius: 14px;
+}
+
+.ssc-lead-form {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 0;
+}
+
+.ssc-lead-title {
+	font-size: 15px;
+}
+
+.ssc-lead-intro {
+	color: var(--ssc-muted);
+	font-size: 13px;
+}
+
+.ssc-field {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin: 0;
+}
+
+.ssc-field label {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.ssc-field input {
+	width: 100%;
+	min-height: 38px;
+	padding: 7px 10px;
+	border: 1px solid #c3cbd2;
+	border-radius: 8px;
+	background: #fff;
+	color: var(--ssc-text);
+}
+
+.ssc-hp {
+	position: absolute;
+	left: -9999px;
+}
+
+.ssc-error {
+	margin: 0;
+	color: #b32d2e;
+	font-size: 13px;
+}
+
+.ssc-error:empty {
+	display: none;
+}
+
+.ssc-lead-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.ssc-btn {
+	padding: 8px 14px;
+	border: 1px solid var(--ssc-brand);
+	border-radius: 8px;
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.ssc-btn[disabled] {
+	opacity: 0.6;
+	cursor: progress;
+}
+
+.ssc-btn--ghost {
+	background: transparent;
+	color: var(--ssc-brand);
+}
+
+.ssc-privacy {
+	color: var(--ssc-muted);
+	font-size: 11px;
+}
+
+/* Footer */
+.ssc-footer {
+	padding: 10px 12px 12px;
+	border-top: 1px solid var(--ssc-line);
+	background: var(--ssc-bg);
+}
+
+.ssc-handoff {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 8px 2px;
+	color: var(--ssc-brand);
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.ssc-handoff svg {
+	width: 16px;
+	height: 16px;
+}
+
+.ssc-handoff:hover {
+	text-decoration: underline;
+}
+
+.ssc-form {
+	display: flex;
+	align-items: flex-end;
+	gap: 8px;
+	margin: 0;
+}
+
+.ssc-input {
+	flex: 1;
+	min-height: 42px;
+	max-height: 120px;
+	padding: 10px 12px;
+	border: 1px solid #c3cbd2;
+	border-radius: 12px;
+	background: #fff;
+	color: var(--ssc-text);
+	resize: none;
+}
+
+.ssc-send {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	border: 0;
+	border-radius: 12px;
+	background: var(--ssc-brand);
+	color: var(--ssc-on-brand);
+	cursor: pointer;
+}
+
+.ssc-send[disabled] {
+	opacity: 0.55;
+	cursor: progress;
+}
+
+/* Phones: the open panel fills the screen. */
+@media (max-width: 480px) {
+	.ssc {
+		right: 12px;
+		bottom: 12px;
+	}
+
+	.ssc.is-open {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.ssc.is-open .ssc-panel {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.ssc.is-open .ssc-launcher {
+		display: none;
+	}
+
+	.ssc-input {
+		font-size: 16px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ssc-panel,
+	.ssc-dots span,
+	.ssc-launcher {
+		animation: none;
+		transition: none;
+	}
+}

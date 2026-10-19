@@ -1,0 +1,760 @@
+# Copyright (C) 2026 aastha-builds
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: SiteSage Chat 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/aastha-builds/wp-ai-site-chatbot/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T16:37:04+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: sitesage-chat\n"
+
+#. Plugin Name of the plugin
+#: sitesage-chat.php
+#: includes/admin/class-admin.php:50
+#: includes/admin/class-admin.php:51
+#: includes/admin/class-admin.php:171
+msgid "SiteSage Chat"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: sitesage-chat.php
+msgid "https://github.com/aastha-builds/wp-ai-site-chatbot"
+msgstr ""
+
+#. Description of the plugin
+#: sitesage-chat.php
+msgid "An AI chatbot that answers visitor questions from your own pages, FAQs and PDFs. Works with OpenAI or Anthropic Claude, and runs in demo mode without any API key."
+msgstr ""
+
+#. Author of the plugin
+#: sitesage-chat.php
+msgid "aastha-builds"
+msgstr ""
+
+#. Author URI of the plugin
+#: sitesage-chat.php
+msgid "https://github.com/aastha-builds"
+msgstr ""
+
+#: includes/admin/class-admin.php:58
+msgid "Overview"
+msgstr ""
+
+#: includes/admin/class-admin.php:67
+#: includes/admin/class-admin.php:489
+msgid "Leads"
+msgstr ""
+
+#: includes/admin/class-admin.php:68
+#: includes/admin/class-admin.php:514
+msgid "Evaluation"
+msgstr ""
+
+#: includes/admin/class-admin.php:69
+#: includes/admin/class-admin.php:112
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: error message.
+#: includes/admin/class-admin.php:137
+#, php-format
+msgid "SiteSage Chat could not re-index the item you saved: %s"
+msgstr ""
+
+#: includes/admin/class-admin.php:145
+msgid "The index was built with a different embedding model than the one in use now. Click \"Index site content\" so the chatbot can find your content."
+msgstr ""
+
+#: includes/admin/class-admin.php:164
+#: includes/admin/class-leads-list-table.php:58
+msgid "Page"
+msgstr ""
+
+#: includes/admin/class-admin.php:165
+msgid "Post"
+msgstr ""
+
+#: includes/admin/class-admin.php:166
+#: includes/class-faq-post-type.php:30
+msgid "FAQ"
+msgstr ""
+
+#: includes/admin/class-admin.php:167
+msgid "PDF"
+msgstr ""
+
+#: includes/admin/class-admin.php:172
+msgid "An AI assistant that answers visitor questions from your pages, FAQs and PDFs."
+msgstr ""
+
+#: includes/admin/class-admin.php:176
+msgid "Mode"
+msgstr ""
+
+#: includes/admin/class-admin.php:177
+#: includes/admin/class-admin.php:267
+msgid "Demo mode"
+msgstr ""
+
+#: includes/admin/class-admin.php:177
+msgid "Live"
+msgstr ""
+
+#: includes/admin/class-admin.php:178
+msgid "Saved sample answers, no API key needed"
+msgstr ""
+
+#: includes/admin/class-admin.php:181
+msgid "Indexed sources"
+msgstr ""
+
+#. translators: %s: number of chunks.
+#: includes/admin/class-admin.php:186
+#, php-format
+msgid "%s chunks of about 500 tokens"
+msgstr ""
+
+#: includes/admin/class-admin.php:191
+msgid "Embeddings"
+msgstr ""
+
+#: includes/admin/class-admin.php:192
+msgid "Not configured"
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/admin/class-admin.php:197
+#, php-format
+msgid "Last indexed %s"
+msgstr ""
+
+#: includes/admin/class-admin.php:198
+msgid "Not indexed yet"
+msgstr ""
+
+#: includes/admin/class-admin.php:205
+#: includes/admin/class-admin.php:213
+msgid "Index site content"
+msgstr ""
+
+#: includes/admin/class-admin.php:206
+msgid "Splits your published pages, FAQs and uploaded PDFs into chunks, creates embeddings and stores them for the chatbot. Pages are re-indexed automatically when you save them."
+msgstr ""
+
+#: includes/admin/class-admin.php:214
+msgid "Open the chat on your site"
+msgstr ""
+
+#: includes/admin/class-admin.php:218
+msgid "What the chatbot knows"
+msgstr ""
+
+#: includes/admin/class-admin.php:222
+msgid "Title"
+msgstr ""
+
+#: includes/admin/class-admin.php:223
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-admin.php:224
+msgid "Chunks"
+msgstr ""
+
+#: includes/admin/class-admin.php:225
+msgid "Tokens (est.)"
+msgstr ""
+
+#: includes/admin/class-admin.php:230
+msgid "Nothing indexed yet. Click \"Index site content\"."
+msgstr ""
+
+#: includes/admin/class-admin.php:259
+msgid "SiteSage Chat Settings"
+msgstr ""
+
+#: includes/admin/class-admin.php:264
+msgid "AI provider"
+msgstr ""
+
+#: includes/admin/class-admin.php:269
+msgid "Use saved sample answers and offline embeddings (no API key, no cost)"
+msgstr ""
+
+#: includes/admin/class-admin.php:272
+msgid "Set by the SITESAGE_DEMO_MODE constant or the DEMO_MODE environment variable."
+msgstr ""
+
+#: includes/admin/class-admin.php:277
+msgid "Provider"
+msgstr ""
+
+#: includes/admin/class-admin.php:280
+msgid "OpenAI"
+msgstr ""
+
+#: includes/admin/class-admin.php:281
+msgid "Anthropic Claude"
+msgstr ""
+
+#: includes/admin/class-admin.php:286
+msgid "Model name"
+msgstr ""
+
+#. translators: 1: default OpenAI model, 2: default Claude model.
+#: includes/admin/class-admin.php:292
+#, php-format
+msgid "Leave empty for the default: %1$s (OpenAI) or %2$s (Claude)."
+msgstr ""
+
+#: includes/admin/class-admin.php:298
+msgid "OpenAI API key"
+msgstr ""
+
+#: includes/admin/class-admin.php:298
+msgid "Used for embeddings, and for answers when OpenAI is the provider."
+msgstr ""
+
+#: includes/admin/class-admin.php:299
+msgid "Anthropic API key"
+msgstr ""
+
+#: includes/admin/class-admin.php:299
+msgid "Used for answers when Anthropic Claude is the provider. Embeddings still use OpenAI."
+msgstr ""
+
+#: includes/admin/class-admin.php:302
+msgid "Embedding model"
+msgstr ""
+
+#: includes/admin/class-admin.php:309
+msgid "Chat widget"
+msgstr ""
+
+#: includes/admin/class-admin.php:312
+msgid "Show widget"
+msgstr ""
+
+#: includes/admin/class-admin.php:313
+msgid "Show the chat bubble on every front-end page"
+msgstr ""
+
+#: includes/admin/class-admin.php:316
+msgid "Assistant name"
+msgstr ""
+
+#: includes/admin/class-admin.php:320
+msgid "Greeting"
+msgstr ""
+
+#: includes/admin/class-admin.php:324
+msgid "Suggested questions"
+msgstr ""
+
+#: includes/admin/class-admin.php:327
+msgid "Optional quick-reply buttons, one per line (up to four)."
+msgstr ""
+
+#: includes/admin/class-admin.php:331
+msgid "Brand color"
+msgstr ""
+
+#: includes/admin/class-admin.php:338
+msgid "Lead capture"
+msgstr ""
+
+#: includes/admin/class-admin.php:341
+msgid "Ask for contact details after"
+msgstr ""
+
+#: includes/admin/class-admin.php:342
+msgid "questions (0 = only on intent words)"
+msgstr ""
+
+#: includes/admin/class-admin.php:345
+msgid "Intent words"
+msgstr ""
+
+#: includes/admin/class-admin.php:348
+msgid "Comma-separated. The form also appears as soon as a visitor uses one of these words."
+msgstr ""
+
+#: includes/admin/class-admin.php:352
+msgid "Google Sheets webhook URL"
+msgstr ""
+
+#: includes/admin/class-admin.php:355
+msgid "Optional. Deploy integrations/google-sheets.gs as a web app and paste its URL here."
+msgstr ""
+
+#: includes/admin/class-admin.php:358
+msgid "Webhook secret"
+msgstr ""
+
+#: includes/admin/class-admin.php:358
+msgid "Must match SHARED_SECRET in the Apps Script."
+msgstr ""
+
+#: includes/admin/class-admin.php:363
+#: includes/class-settings.php:51
+msgid "Talk to a person"
+msgstr ""
+
+#: includes/admin/class-admin.php:366
+msgid "Handoff channel"
+msgstr ""
+
+#: includes/admin/class-admin.php:368
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/admin/class-admin.php:370
+#: includes/admin/class-leads-list-table.php:56
+#: includes/class-widget.php:113
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-admin.php:374
+msgid "WhatsApp number"
+msgstr ""
+
+#: includes/admin/class-admin.php:375
+msgid "International format, digits only."
+msgstr ""
+
+#: includes/admin/class-admin.php:378
+msgid "Email address"
+msgstr ""
+
+#: includes/admin/class-admin.php:382
+msgid "Button label"
+msgstr ""
+
+#: includes/admin/class-admin.php:389
+msgid "Guardrails"
+msgstr ""
+
+#: includes/admin/class-admin.php:392
+msgid "Rate limit per IP"
+msgstr ""
+
+#: includes/admin/class-admin.php:395
+msgid "questions every"
+msgstr ""
+
+#: includes/admin/class-admin.php:396
+msgid "Minutes"
+msgstr ""
+
+#: includes/admin/class-admin.php:397
+msgid "minutes"
+msgstr ""
+
+#: includes/admin/class-admin.php:401
+msgid "Max message length"
+msgstr ""
+
+#: includes/admin/class-admin.php:402
+msgid "characters"
+msgstr ""
+
+#: includes/admin/class-admin.php:405
+msgid "Minimum relevance"
+msgstr ""
+
+#: includes/admin/class-admin.php:408
+msgid "Cosine similarity from 0 to 1. Below it the bot hands over to your team without calling the AI. Leave empty for the default."
+msgstr ""
+
+#: includes/admin/class-admin.php:412
+msgid "What is sent to the AI"
+msgstr ""
+
+#: includes/admin/class-admin.php:413
+msgid "Only the visitor question and the retrieved passages from your site. No chat history, no contact details."
+msgstr ""
+
+#: includes/admin/class-admin.php:419
+msgid "Content to index"
+msgstr ""
+
+#: includes/admin/class-admin.php:422
+msgid "Include"
+msgstr ""
+
+#: includes/admin/class-admin.php:426
+msgid "Pages"
+msgstr ""
+
+#: includes/admin/class-admin.php:427
+#: includes/class-faq-post-type.php:29
+#: includes/class-faq-post-type.php:37
+#: includes/class-faq-post-type.php:38
+msgid "FAQs"
+msgstr ""
+
+#: includes/admin/class-admin.php:428
+msgid "PDFs in the media library"
+msgstr ""
+
+#: includes/admin/class-admin.php:429
+msgid "Blog posts"
+msgstr ""
+
+#: includes/admin/class-admin.php:463
+msgid "Not set"
+msgstr ""
+
+#: includes/admin/class-admin.php:465
+msgid "Remove saved value"
+msgstr ""
+
+#: includes/admin/class-admin.php:467
+msgid "(set in wp-config.php or the environment)"
+msgstr ""
+
+#: includes/admin/class-admin.php:469
+msgid "Leave empty to keep the current value."
+msgstr ""
+
+#: includes/admin/class-admin.php:490
+msgid "Export CSV"
+msgstr ""
+
+#: includes/admin/class-admin.php:492
+msgid "Visitors who left their details in the chat. New leads are also posted to your Google Sheet when a webhook is set."
+msgstr ""
+
+#: includes/admin/class-admin.php:496
+msgid "Search leads"
+msgstr ""
+
+#: includes/admin/class-admin.php:515
+msgid "Runs the test questions in docs/test-questions.csv through the real answer pipeline and checks that each answer links the expected page."
+msgstr ""
+
+#: includes/admin/class-admin.php:520
+msgid "Run evaluation"
+msgstr ""
+
+#: includes/admin/class-admin.php:521
+msgid "Same as running: wp sitesage eval"
+msgstr ""
+
+#: includes/admin/class-admin.php:525
+msgid "No evaluation has run yet."
+msgstr ""
+
+#: includes/admin/class-admin.php:534
+msgid "Passed"
+msgstr ""
+
+#: includes/admin/class-admin.php:539
+msgid "Pass rate"
+msgstr ""
+
+#: includes/admin/class-admin.php:544
+msgid "Pipeline"
+msgstr ""
+
+#: includes/admin/class-admin.php:554
+msgid "Question"
+msgstr ""
+
+#: includes/admin/class-admin.php:555
+msgid "Expected source"
+msgstr ""
+
+#: includes/admin/class-admin.php:556
+msgid "Sources shown"
+msgstr ""
+
+#: includes/admin/class-admin.php:557
+msgid "Rank"
+msgstr ""
+
+#: includes/admin/class-admin.php:558
+msgid "Result"
+msgstr ""
+
+#: includes/admin/class-admin.php:569
+msgid "Pass"
+msgstr ""
+
+#: includes/admin/class-admin.php:569
+msgid "Fail"
+msgstr ""
+
+#. translators: 1: number of sources, 2: number of chunks.
+#: includes/admin/class-admin.php:599
+#, php-format
+msgid "Indexed %1$d sources into %2$d chunks."
+msgstr ""
+
+#. translators: 1: passed questions, 2: total questions.
+#: includes/admin/class-admin.php:624
+#, php-format
+msgid "Evaluation finished: %1$d of %2$d passed."
+msgstr ""
+
+#: includes/admin/class-admin.php:708
+msgid "You do not have permission to manage SiteSage Chat."
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:54
+#: includes/class-widget.php:111
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:55
+#: includes/class-widget.php:112
+msgid "Phone"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:57
+msgid "Last question"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:59
+msgid "Google Sheets"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:60
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:70
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:142
+msgid "Sent"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:143
+msgid "Failed"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:144
+msgid "Not set up"
+msgstr ""
+
+#: includes/admin/class-leads-list-table.php:160
+msgid "No leads yet. They appear here when visitors leave their details in the chat."
+msgstr ""
+
+#: includes/class-demo-importer.php:47
+msgid "The demo content file is missing or invalid."
+msgstr ""
+
+#. translators: %s: file path.
+#: includes/class-evaluator.php:45
+#, php-format
+msgid "Cannot read %s"
+msgstr ""
+
+#: includes/class-evaluator.php:55
+msgid "The CSV needs question and expected_source columns."
+msgstr ""
+
+#: includes/class-faq-post-type.php:31
+msgid "Add New FAQ"
+msgstr ""
+
+#: includes/class-faq-post-type.php:32
+msgid "Edit FAQ"
+msgstr ""
+
+#: includes/class-faq-post-type.php:33
+msgid "New FAQ"
+msgstr ""
+
+#: includes/class-faq-post-type.php:34
+msgid "View FAQ"
+msgstr ""
+
+#: includes/class-faq-post-type.php:35
+msgid "Search FAQs"
+msgstr ""
+
+#: includes/class-faq-post-type.php:36
+msgid "No FAQs found."
+msgstr ""
+
+#: includes/class-lead-store.php:38
+msgid "Please enter your name."
+msgstr ""
+
+#: includes/class-lead-store.php:41
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/class-lead-store.php:45
+msgid "Please enter a valid phone number."
+msgstr ""
+
+#: includes/class-lead-store.php:74
+msgid "Could not save your details. Please try again."
+msgstr ""
+
+#: includes/class-plugin.php:184
+msgid "Add an OpenAI API key for embeddings, or turn on demo mode."
+msgstr ""
+
+#: includes/class-plugin.php:201
+msgid "Add an API key for the selected AI provider, or turn on demo mode."
+msgstr ""
+
+#: includes/class-prompt-builder.php:33
+msgid "this website"
+msgstr ""
+
+#: includes/class-prompt-builder.php:47
+msgid "I don't know that one, let me connect you with our team"
+msgstr ""
+
+#: includes/class-rest-controller.php:84
+msgid "Your session expired. Please reload the page and try again."
+msgstr ""
+
+#: includes/class-rest-controller.php:100
+msgid "Please type a question."
+msgstr ""
+
+#. translators: %d: maximum number of characters.
+#: includes/class-rest-controller.php:106
+#, php-format
+msgid "Please keep your question under %d characters."
+msgstr ""
+
+#: includes/class-rest-controller.php:191
+#: includes/class-widget.php:116
+msgid "Thanks! Our team will get back to you soon."
+msgstr ""
+
+#: includes/class-rest-controller.php:212
+msgid "You are sending messages too quickly. Please wait a few minutes and try again."
+msgstr ""
+
+#: includes/class-rest-controller.php:233
+msgid "The assistant is unavailable right now. Please try again later or talk to our team."
+msgstr ""
+
+#: includes/class-settings.php:44
+msgid "Site Assistant"
+msgstr ""
+
+#: includes/class-settings.php:45
+msgid "Hi! Ask me anything about this website."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-widget.php:58
+#, php-format
+msgid "Hi %s, I have a question from your website chat."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-widget.php:70
+#, php-format
+msgid "Question from the %s website"
+msgstr ""
+
+#: includes/class-widget.php:101
+msgid "Open chat"
+msgstr ""
+
+#: includes/class-widget.php:102
+msgid "Close chat"
+msgstr ""
+
+#: includes/class-widget.php:103
+msgid "Type your question…"
+msgstr ""
+
+#: includes/class-widget.php:104
+msgid "Send"
+msgstr ""
+
+#: includes/class-widget.php:105
+msgid "Assistant is typing"
+msgstr ""
+
+#: includes/class-widget.php:106
+msgid "Sources"
+msgstr ""
+
+#: includes/class-widget.php:107
+msgid "Sorry, something went wrong. Please try again."
+msgstr ""
+
+#: includes/class-widget.php:108
+msgid "That message is too long."
+msgstr ""
+
+#: includes/class-widget.php:109
+msgid "Want us to follow up?"
+msgstr ""
+
+#: includes/class-widget.php:110
+msgid "Leave your details and our team will contact you."
+msgstr ""
+
+#: includes/class-widget.php:114
+msgid "Send details"
+msgstr ""
+
+#: includes/class-widget.php:115
+msgid "No thanks"
+msgstr ""
+
+#: includes/class-widget.php:117
+msgid "Your details go only to our team, never to the AI."
+msgstr ""
+
+#: includes/class-widget.php:118
+msgid "Demo mode: sample answers"
+msgstr ""
+
+#: includes/class-widget.php:119
+msgid "Answers come from this website’s content."
+msgstr ""
+
+#: includes/class-widget.php:120
+msgid "Please fill in all fields."
+msgstr ""
+
+#: includes/providers/class-anthropic-provider.php:126
+msgid "The AI service declined to answer."
+msgstr ""
+
+#: includes/providers/class-anthropic-provider.php:140
+#: includes/providers/class-openai-provider.php:82
+msgid "The AI service returned an empty answer."
+msgstr ""
+
+#. translators: 1: answer text, 2: source page title, 3: source page URL.
+#: includes/providers/class-demo-chat-provider.php:201
+#, php-format
+msgid "%1$s Read more: [%2$s](%3$s)"
+msgstr ""
+
+#. translators: 1: HTTP status code, 2: error message from the API.
+#: includes/providers/class-http.php:48
+#, php-format
+msgid "The AI service returned HTTP %1$d. %2$s"
+msgstr ""
+
+#: includes/providers/class-http.php:53
+msgid "The AI service returned an unreadable response."
+msgstr ""
+
+#: includes/providers/class-openai-provider.php:109
+msgid "The embeddings response did not match the request."
+msgstr ""

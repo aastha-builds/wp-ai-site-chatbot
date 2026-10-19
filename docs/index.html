@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SiteSage Chat · AI chatbot for WordPress trained on your own content</title>
+<meta name="description" content="SiteSage Chat is a WordPress plugin that adds an AI chatbot trained on your own pages, FAQs and PDFs. OpenAI or Claude, lead capture, WhatsApp handoff and an evaluation suite. Demo project with fictional data.">
+<meta property="og:title" content="SiteSage Chat: an AI chatbot for WordPress trained on your own content">
+<meta property="og:description" content="Answers visitors from your pages, FAQs and PDFs, links the source page, captures leads and hands off to a person.">
+<meta property="og:image" content="https://aastha-builds.github.io/wp-ai-site-chatbot/assets/img/chat-widget.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230e7c86'/%3E%3Cpath d='M6 6h12a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18 16H9.5L6 19V7.5A1.5 1.5 0 0 1 7.5 6z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6"/><path d="M6 6h12a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18 16H9.5L6 19V7.5A1.5 1.5 0 0 1 7.5 6z"/></svg>
+      SiteSage Chat
+    </a>
+    <nav aria-label="Page">
+      <a href="#demo">Demo</a>
+      <a href="#how">How it works</a>
+      <a href="#screens">Screenshots</a>
+      <a href="#built">Built with</a>
+      <a class="nav-gh" href="https://github.com/aastha-builds/wp-ai-site-chatbot">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="tag">WordPress plugin · OpenAI or Claude · Demo project with fictional data</p>
+      <h1>An AI chatbot that answers your visitors from your own website, built for clinics and small businesses on WordPress.</h1>
+      <p class="sub">SiteSage Chat reads your pages, FAQs and PDFs, answers in under 120 words, links the page it used, captures leads and hands off to a real person on WhatsApp or email.</p>
+      <div class="actions">
+        <a class="btn" href="#demo">Try the interactive demo</a>
+        <a class="btn btn-alt" href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/aastha-builds/wp-ai-site-chatbot/main/blueprint.json">Live WordPress demo (Playground)</a>
+        <a class="btn btn-alt" href="https://github.com/aastha-builds/wp-ai-site-chatbot">View the code on GitHub</a>
+        <!-- Replace href with the real video URL once it is recorded (script: docs/demo-script.md). -->
+        <a class="btn btn-alt" href="#video">Watch the 90-second video</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Interactive demo</h2>
+        <span class="preview-label">Interactive preview with sample data</span>
+      </div>
+      <p class="note">A fictional dental clinic, BrightSmile Dental, with the same chat widget the plugin adds to WordPress. Ask about prices, insurance, opening hours or booking, then click a source link under an answer.</p>
+      <div class="browser">
+        <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>brightsmile.example</em></div>
+        <iframe src="demo/index.html?sitesage_open=1" title="BrightSmile Dental demo site with the SiteSage chat widget" loading="lazy"></iframe>
+      </div>
+      <p class="actions-inline"><a class="btn btn-small" href="demo/index.html?sitesage_open=1">Open the demo full screen</a></p>
+      <p class="disclaimer">This preview runs entirely in your browser: it matches your question against 30 saved answers with simple keyword matching, and the lead form keeps your details in your browser only. It is not the live product. The real plugin code is on <a href="https://github.com/aastha-builds/wp-ai-site-chatbot">GitHub</a>, and the <a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/aastha-builds/wp-ai-site-chatbot/main/blueprint.json">Playground link</a> runs the real plugin in WordPress.</p>
+    </div>
+  </section>
+
+  <section id="how" class="section alt">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="flow" role="img" aria-label="Indexing: pages, FAQs and PDFs are split into 500-token chunks, embedded and stored. Answering: the question is embedded, the top 4 chunks are found by cosine similarity, and only the question and those chunks go to OpenAI or Claude. The answer comes back with source links; leads go to WordPress and Google Sheets.">
+        <div class="lane">
+          <h3>1. Indexing <small>admin button or on save</small></h3>
+          <ol class="steps">
+            <li><strong>Pages, FAQs, PDFs</strong><span>published content and media library PDFs</span></li>
+            <li><strong>Chunk</strong><span>about 500 tokens each, with overlap</span></li>
+            <li><strong>Embed</strong><span>OpenAI embeddings, or the saved demo file</span></li>
+            <li><strong>Store</strong><span><code>wp_sitesage_chunks</code> with title and URL</span></li>
+          </ol>
+        </div>
+        <div class="lane">
+          <h3>2. Answering <small><code>POST /wp-json/sitesage/v1/ask</code></small></h3>
+          <ol class="steps">
+            <li><strong>Visitor question</strong><span>nonce, rate limit per IP, length limit</span></li>
+            <li><strong>Retrieve</strong><span>cosine similarity in PHP, top 4 chunks</span></li>
+            <li><strong>Ask the AI</strong><span>OpenAI or Claude get only the question and those chunks</span></li>
+            <li><strong>Answer + sources</strong><span>under 120 words, linked page, or "I don't know"</span></li>
+          </ol>
+        </div>
+        <div class="lane">
+          <h3>3. Follow-up</h3>
+          <ol class="steps">
+            <li><strong>Lead form</strong><span>after 2 questions or words like book, appointment, price</span></li>
+            <li><strong>Leads screen</strong><span><code>wp_sitesage_leads</code>, CSV export</span></li>
+            <li><strong>Google Sheets</strong><span>webhook to an Apps Script</span></li>
+            <li><strong>Talk to a person</strong><span>WhatsApp or email button</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <div class="features">
+        <article><h3>Learns your site</h3><p>One click indexes pages, a FAQ post type and uploaded PDFs. Edited pages are re-indexed when you save them.</p></article>
+        <article><h3>Answers with sources</h3><p>Every answer comes only from your content, stays under 120 words and links the page it used.</p></article>
+        <article><h3>Knows when to stop</h3><p>When your content has no answer it says "I don't know that one, let me connect you with our team".</p></article>
+        <article><h3>Captures leads</h3><p>Asks for name, phone and email at the right moment, saves them in WordPress and posts them to Google Sheets.</p></article>
+        <article><h3>Hands off to people</h3><p>A "Talk to a person" button opens WhatsApp or email, whichever you set.</p></article>
+        <article><h3>Safe by default</h3><p>Nonces, capability checks, rate limits, a message length cap, and only the question plus retrieved text go to the AI.</p></article>
+        <article><h3>Your choice of AI</h3><p>OpenAI or Anthropic Claude, any model name. API keys are never shown back in full.</p></article>
+        <article><h3>Measured, not guessed</h3><p><code>wp sitesage eval</code> runs 30 real patient questions and writes a pass or fail report.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="section alt">
+    <div class="wrap">
+      <h2>Screenshots of the real plugin</h2>
+      <p class="note">Taken from WordPress running the plugin in demo mode with the fictional BrightSmile content.</p>
+      <div class="shots">
+        <figure>
+          <a href="assets/img/chat-widget.png"><img src="assets/img/chat-widget.png" alt="BrightSmile homepage with the SiteSage chat open, showing an answer with a source link" width="1000" height="750" loading="lazy"></a>
+          <figcaption>The chat widget on the site: answer, source links and the "Talk to a person" button.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/img/admin-settings.png"><img src="assets/img/admin-settings.png" alt="SiteSage Chat settings screen with provider, model and masked API key" width="1000" height="750" loading="lazy"></a>
+          <figcaption>Settings: OpenAI or Claude, model name, write-only API keys, demo mode.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/img/admin-leads.png"><img src="assets/img/admin-leads.png" alt="Leads table with name, phone, email, question and Google Sheets status" width="1000" height="750" loading="lazy"></a>
+          <figcaption>Leads table with search, bulk delete and CSV export.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/img/admin-eval.png"><img src="assets/img/admin-eval.png" alt="Evaluation screen showing pass rate and per-question results" width="1000" height="750" loading="lazy"></a>
+          <figcaption>Evaluation report: 30 patient questions, pass or fail per question. <a href="https://github.com/aastha-builds/wp-ai-site-chatbot/blob/main/docs/eval-report.md">Read the report</a>.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="section">
+    <div class="wrap narrow">
+      <h2>90-second walkthrough</h2>
+      <div class="video-card">
+        <p><strong>Video coming soon.</strong> It follows the <a href="https://github.com/aastha-builds/wp-ai-site-chatbot/blob/main/docs/demo-script.md">60 to 90 second demo script</a>: indexing the site, three patient questions, the lead form, the handoff button and the evaluation report.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="built" class="section alt">
+    <div class="wrap">
+      <h2>Built with</h2>
+      <ul class="chips">
+        <li>WordPress plugin API</li>
+        <li>PHP 7.4+</li>
+        <li>WordPress REST API</li>
+        <li>WP-CLI commands</li>
+        <li>Custom tables with <code>$wpdb</code></li>
+        <li>Settings API</li>
+        <li>WP_List_Table</li>
+        <li>Vanilla JavaScript and CSS</li>
+        <li>OpenAI Chat Completions and Embeddings</li>
+        <li>Anthropic Claude Messages API</li>
+        <li>Retrieval-augmented generation (RAG)</li>
+        <li>Cosine similarity in PHP</li>
+        <li>Google Apps Script</li>
+        <li>PHPUnit</li>
+        <li>WordPress Coding Standards</li>
+        <li>WordPress Playground blueprint</li>
+        <li>GitHub Pages</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://github.com/aastha-builds/wp-ai-site-chatbot">View the code on GitHub</a>
+        <a class="btn btn-alt" href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/aastha-builds/wp-ai-site-chatbot/main/blueprint.json">Live WordPress demo (Playground)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Demo project with fictional data. BrightSmile Dental, its staff and prices are made up. MIT licensed.</p>
+  </div>
+</footer>
+
+</body>
+</html>

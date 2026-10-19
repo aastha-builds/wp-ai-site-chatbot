@@ -1,0 +1,357 @@
+{
+  "notice": "Saved sample AI responses for demo mode (fictional BrightSmile Dental). Each answer was written only from the matching demo page, the way the live model is instructed to answer.",
+  "answers": [
+    {
+      "question": "What are your opening hours?",
+      "source": "Contact",
+      "answer": "We're open Monday to Thursday from 8 am to 6 pm, Friday from 8 am to 2 pm and Saturday from 9 am to 1 pm. We're closed on Sundays.",
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "times",
+        "schedule",
+        "closed",
+        "sunday",
+        "weekday"
+      ]
+    },
+    {
+      "question": "Are you open on Saturday?",
+      "source": "Are you open on Saturdays?",
+      "answer": "Yes, we're open on Saturdays from 9 am to 1 pm. Saturday slots fill quickly, so it's best to book a week or two ahead. We're closed on Sundays.",
+      "keywords": [
+        "saturday",
+        "weekend",
+        "sat"
+      ]
+    },
+    {
+      "question": "Where is the clinic and is there parking?",
+      "source": "Contact",
+      "answer": "You'll find us at 128 Harbor Lane, Suite 200, Lakeview, on the second floor (there's an elevator). Free patient parking is in the lot behind the building, with two accessible spaces by the entrance. Bus lines 12 and 31 stop one block away.",
+      "keywords": [
+        "parking",
+        "address",
+        "location",
+        "where",
+        "directions",
+        "bus",
+        "find"
+      ]
+    },
+    {
+      "question": "How much does teeth whitening cost?",
+      "source": "Pricing",
+      "answer": "In-office teeth whitening is $399, and a take-home whitening kit with custom trays is $199. Whitening is cosmetic, so insurance usually doesn't cover it, but payment plans are available for larger treatments.",
+      "keywords": [
+        "whitening",
+        "price",
+        "cost",
+        "whiten",
+        "bleaching"
+      ]
+    },
+    {
+      "question": "How long does in-office whitening take?",
+      "source": "Teeth Whitening",
+      "answer": "In-office whitening takes one visit of about 90 minutes. We protect your gums, apply a professional gel in three short rounds, and most patients leave with teeth up to 8 shades whiter.",
+      "keywords": [
+        "whitening",
+        "long",
+        "time",
+        "session",
+        "shades"
+      ]
+    },
+    {
+      "question": "Will whitening work on my veneers?",
+      "source": "Does whitening work on crowns or veneers?",
+      "answer": "No. Whitening gel only lightens natural enamel, so veneers, crowns and fillings keep their color. We often suggest whitening first and then matching any new veneers or crowns to your brighter shade.",
+      "keywords": [
+        "veneers",
+        "crowns",
+        "fillings",
+        "whitening"
+      ]
+    },
+    {
+      "question": "How much is a dental implant?",
+      "source": "Pricing",
+      "answer": "A single dental implant with its crown starts at $3,800. The implant consultation, including a 3D scan, is free, and 0% payment plans over 6 or 12 months are available for treatment over $500.",
+      "keywords": [
+        "implant",
+        "price",
+        "cost"
+      ]
+    },
+    {
+      "question": "How long does the implant process take?",
+      "source": "Implants",
+      "answer": "After a free consultation and 3D scan, the implant is placed in a short procedure with local anesthetic. It then heals for 3 to 6 months while it fuses with the bone, and finally your custom crown is attached.",
+      "keywords": [
+        "implant",
+        "process",
+        "steps",
+        "healing",
+        "months"
+      ]
+    },
+    {
+      "question": "Can I get dental implants if I smoke?",
+      "source": "Implants",
+      "answer": "Often yes, but smoking lowers the implant success rate, so the dentist will review your health history at the free consultation. If your jawbone is too thin, a bone graft can rebuild it first.",
+      "keywords": [
+        "smoke",
+        "smoking",
+        "candidate",
+        "implant",
+        "diabetes"
+      ]
+    },
+    {
+      "question": "Do you take my PPO insurance?",
+      "source": "Insurance",
+      "answer": "Most likely. We're in-network with most PPO dental plans and file the claim for you. If your PPO is out-of-network, we still file it and you pay only your share. Our team verifies your benefits before your first visit.",
+      "keywords": [
+        "insurance",
+        "ppo",
+        "network",
+        "plan",
+        "covered"
+      ]
+    },
+    {
+      "question": "Do you accept Medicaid?",
+      "source": "Insurance",
+      "answer": "We don't accept Medicaid for adults. For children's coverage we check case by case, so please contact our team. HMO and DHMO plans aren't accepted either.",
+      "keywords": [
+        "medicaid",
+        "hmo",
+        "dhmo",
+        "state"
+      ]
+    },
+    {
+      "question": "I don't have insurance. What are my options?",
+      "source": "What if I don't have dental insurance?",
+      "answer": "You can join the BrightSmile membership plan for $29 a month (adults) or $19 a month (children). It includes two cleanings and checkups a year, x-rays and 15% off other treatment.",
+      "keywords": [
+        "uninsured",
+        "membership",
+        "no insurance",
+        "without insurance"
+      ]
+    },
+    {
+      "question": "Do you offer payment plans?",
+      "source": "Do you offer payment plans?",
+      "answer": "Yes. For treatment over $500 we offer in-house payment plans with 0% interest over 6 or 12 months, with no credit check.",
+      "keywords": [
+        "payment",
+        "finance",
+        "financing",
+        "installments",
+        "monthly"
+      ]
+    },
+    {
+      "question": "Do you see kids?",
+      "source": "Do you see children?",
+      "answer": "Yes! We see children from age 2 and recommend a first visit by age 2 or 3 so they get comfortable with the dentist. Parents are welcome to stay in the room.",
+      "keywords": [
+        "kids",
+        "children",
+        "child",
+        "son",
+        "daughter",
+        "toddler",
+        "pediatric"
+      ]
+    },
+    {
+      "question": "I have a really bad toothache, what should I do?",
+      "source": "What should I do in a dental emergency?",
+      "answer": "Please call us right away at (415) 555-0142. We keep time free every day for same-day emergency visits. Outside office hours, call our emergency line at (415) 555-0199.",
+      "keywords": [
+        "toothache",
+        "emergency",
+        "pain",
+        "broken",
+        "swelling",
+        "urgent"
+      ]
+    },
+    {
+      "question": "I'm scared of the dentist. Can you help me relax?",
+      "source": "I get nervous at the dentist. Can you help?",
+      "answer": "Absolutely. Let us know how you feel and we'll go at your pace. We offer laughing gas and mild oral sedation, noise-cancelling headphones and breaks whenever you need them.",
+      "keywords": [
+        "scared",
+        "nervous",
+        "anxious",
+        "anxiety",
+        "sedation",
+        "fear",
+        "relax"
+      ]
+    },
+    {
+      "question": "How often should I get my teeth cleaned?",
+      "source": "How often should I get a dental cleaning?",
+      "answer": "Most people should have a checkup and professional cleaning every six months. If you have gum disease, you may need a deep cleaning every three or four months.",
+      "keywords": [
+        "cleaning",
+        "cleaned",
+        "checkup",
+        "often",
+        "six months"
+      ]
+    },
+    {
+      "question": "What should I bring to my first appointment?",
+      "source": "New Patient Guide",
+      "answer": "Please bring a photo ID, your dental insurance card if you have one, a list of your medications and allergies, and any dental x-rays from the last two years. A parent or guardian must come with children under 18.",
+      "keywords": [
+        "bring",
+        "documents",
+        "id",
+        "insurance card",
+        "what to bring",
+        "first visit"
+      ]
+    },
+    {
+      "question": "Can I fill out the new patient forms online?",
+      "source": "New Patient Guide",
+      "answer": "Yes. After you book, we email you a secure link to fill out the new patient forms online. If you prefer paper forms, just arrive 15 minutes early to complete them.",
+      "keywords": [
+        "forms",
+        "paperwork",
+        "online",
+        "fill"
+      ]
+    },
+    {
+      "question": "How long is the first visit?",
+      "source": "How long is the first appointment?",
+      "answer": "Plan for about 90 minutes. That covers your medical history, digital x-rays, a full exam, a cleaning and time to talk through any treatment you may need.",
+      "keywords": [
+        "first visit",
+        "long",
+        "minutes",
+        "duration"
+      ]
+    },
+    {
+      "question": "What happens if I need to cancel my appointment?",
+      "source": "What is your cancellation policy?",
+      "answer": "Please give us at least 24 hours notice to cancel or reschedule. Late cancellations and missed appointments may have a $50 fee.",
+      "keywords": [
+        "cancel",
+        "reschedule",
+        "missed",
+        "fee",
+        "policy"
+      ]
+    },
+    {
+      "question": "Do you offer Invisalign or clear aligners?",
+      "source": "Do you offer clear aligners instead of braces?",
+      "answer": "Yes, we offer clear aligners for teens and adults. Treatment usually takes 6 to 18 months, and the consultation with a 3D scan is free.",
+      "keywords": [
+        "invisalign",
+        "aligners",
+        "braces",
+        "straighten",
+        "crooked"
+      ]
+    },
+    {
+      "question": "Are x-rays safe?",
+      "source": "Are dental x-rays safe?",
+      "answer": "Yes. We use digital x-rays, which use up to 80% less radiation than old film x-rays. We only take them when needed and use a protective collar.",
+      "keywords": [
+        "xray",
+        "x-ray",
+        "radiation",
+        "safe"
+      ]
+    },
+    {
+      "question": "Who are the dentists at BrightSmile?",
+      "source": "About",
+      "answer": "Our dentists are Dr. Elena Marsh, who founded the practice in 2011 and leads general and cosmetic dentistry, and Dr. Samuel Okafor, who focuses on dental implants, oral surgery and root canals.",
+      "keywords": [
+        "dentists",
+        "doctors",
+        "team",
+        "who",
+        "staff",
+        "dr"
+      ]
+    },
+    {
+      "question": "What services do you offer?",
+      "source": "Services",
+      "answer": "We offer preventive care, fillings, same-day crowns and root canals, children's dentistry, teeth whitening and veneers, clear aligners, dental implants, same-day emergency visits and sedation for nervous patients.",
+      "keywords": [
+        "services",
+        "treatments",
+        "offer",
+        "do you do"
+      ]
+    },
+    {
+      "question": "Are you taking new patients?",
+      "source": "Are you accepting new patients?",
+      "answer": "Yes! We welcome new patients of all ages and usually have openings within the same week. You can call, message us on WhatsApp or ask me to help you request an appointment.",
+      "keywords": [
+        "new patients",
+        "accepting",
+        "taking",
+        "book",
+        "booking",
+        "appointment",
+        "schedule",
+        "openings"
+      ]
+    },
+    {
+      "question": "My gums bleed when I brush. Can you help?",
+      "source": "Do you treat bad breath or bleeding gums?",
+      "answer": "Yes. Bleeding gums are often a sign of gum disease. We check your gums at every visit and offer deep cleanings (scaling and root planing) to treat it.",
+      "keywords": [
+        "gums",
+        "bleeding",
+        "bleed",
+        "breath",
+        "gum disease"
+      ]
+    },
+    {
+      "question": "What does the new patient special include?",
+      "source": "Home",
+      "answer": "New patients without insurance get a complete first visit for $149: an exam, a full set of digital x-rays and a professional cleaning. If you have insurance, we bill your plan directly.",
+      "keywords": [
+        "special",
+        "offer",
+        "deal",
+        "149",
+        "first visit"
+      ]
+    },
+    {
+      "question": "What's the weather like in Lakeview today?",
+      "source": "none",
+      "answer": "I don't know that one, let me connect you with our team",
+      "keywords": []
+    },
+    {
+      "question": "Can you recommend a good pizza place nearby?",
+      "source": "none",
+      "answer": "I don't know that one, let me connect you with our team",
+      "keywords": []
+    }
+  ]
+}

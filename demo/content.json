@@ -1,0 +1,256 @@
+{
+  "notice": "Fictional demo content. BrightSmile Dental, its staff, address, phone numbers and prices are made up for this portfolio demo.",
+  "site": {
+    "name": "BrightSmile Dental",
+    "tagline": "Gentle family and cosmetic dentistry in Lakeview"
+  },
+  "settings": {
+    "bot_name": "BrightSmile Assistant",
+    "greeting": "Hi! I'm the BrightSmile assistant. Ask me about treatments, prices, insurance or booking a visit.",
+    "suggestions": "How much is teeth whitening?\nDo you take my insurance?\nWhat should I bring to my first visit?",
+    "brand_color": "#0e7c86",
+    "handoff_type": "whatsapp",
+    "handoff_whatsapp": "14155550142",
+    "handoff_email": "hello@brightsmile.example",
+    "handoff_label": "Talk to a person",
+    "lead_after_questions": 2,
+    "lead_intent_words": "book, appointment, price, pricing"
+  },
+  "pdf": {
+    "file": "new-patient-guide.pdf",
+    "title": "New Patient Guide"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "blocks": [
+        { "heading": "Gentle dentistry for the whole family" },
+        { "paragraph": "Welcome to BrightSmile Dental, a friendly neighborhood practice in Lakeview. We look after children, adults and seniors, from first baby teeth to dental implants, in a calm and modern clinic." },
+        { "heading": "Why patients choose us" },
+        { "list": [
+          "Evening appointments until 6 pm Monday to Thursday, plus Saturday mornings",
+          "Same-day emergency visits for toothache and broken teeth",
+          "Transparent prices published on our website",
+          "Digital x-rays, intraoral cameras and same-day crowns",
+          "A calm, judgment-free team that is great with nervous patients"
+        ] },
+        { "heading": "New patient special" },
+        { "paragraph": "New patients without insurance can get a complete first visit (exam, full set of digital x-rays and a professional cleaning) for $149. If you have dental insurance, we bill your plan directly." },
+        { "heading": "Ready to visit?" },
+        { "paragraph": "Call us at (415) 555-0142, send us a message on WhatsApp, or ask our online assistant to help you request an appointment. We usually have openings within the same week." }
+      ]
+    },
+    {
+      "title": "About",
+      "slug": "about",
+      "blocks": [
+        { "heading": "Our story" },
+        { "paragraph": "BrightSmile Dental was founded in 2011 by Dr. Elena Marsh with one goal: dentistry that feels kind, honest and unhurried. Today our team of two dentists, three hygienists and a friendly front desk cares for more than 4,000 families in Lakeview." },
+        { "heading": "Meet the dentists" },
+        { "subheading": "Dr. Elena Marsh, DDS" },
+        { "paragraph": "Dr. Marsh leads general and cosmetic dentistry, including crowns, veneers and teeth whitening. She has practiced for over 15 years and is known for her gentle hands with anxious patients." },
+        { "subheading": "Dr. Samuel Okafor, DMD" },
+        { "paragraph": "Dr. Okafor focuses on dental implants, oral surgery and root canals. He completed a two-year implant fellowship and places and restores implants in our own clinic." },
+        { "heading": "Technology we use" },
+        { "paragraph": "We use low-radiation digital x-rays, a 3D cone beam scanner for implant planning, intraoral cameras so you can see what we see, and an in-house milling unit for same-day crowns." },
+        { "heading": "Languages" },
+        { "paragraph": "Our team speaks English and Spanish. Hablamos español." }
+      ]
+    },
+    {
+      "title": "Services",
+      "slug": "services",
+      "blocks": [
+        { "heading": "Everything your smile needs under one roof" },
+        { "subheading": "Preventive care" },
+        { "paragraph": "Checkups, professional cleanings, digital x-rays, fluoride and sealants. Most patients need a checkup and cleaning every six months." },
+        { "subheading": "Restorative dentistry" },
+        { "paragraph": "Tooth-colored fillings, same-day crowns, bridges and root canal therapy to save damaged teeth." },
+        { "subheading": "Children's dentistry" },
+        { "paragraph": "We see kids from age 2 in a fun, relaxed setting, with sealants and fluoride to prevent cavities." },
+        { "subheading": "Cosmetic dentistry" },
+        { "paragraph": "Teeth whitening, porcelain veneers and bonding to brighten and reshape your smile." },
+        { "subheading": "Clear aligners" },
+        { "paragraph": "Straighten crooked or gapped teeth with removable clear aligners instead of metal braces. A free consultation includes a 3D scan and a preview of your new smile." },
+        { "subheading": "Dental implants" },
+        { "paragraph": "Permanent replacements for missing teeth, planned and placed in our clinic." },
+        { "subheading": "Emergency dentistry" },
+        { "paragraph": "Toothache, swelling, a broken or knocked-out tooth? We keep time free every day for same-day emergency visits." },
+        { "subheading": "Sedation for nervous patients" },
+        { "paragraph": "Laughing gas (nitrous oxide) and mild oral sedation help anxious patients feel relaxed during treatment." }
+      ]
+    },
+    {
+      "title": "Teeth Whitening",
+      "slug": "teeth-whitening",
+      "parent": "services",
+      "blocks": [
+        { "heading": "A brighter smile, safely" },
+        { "paragraph": "Coffee, tea, wine and time can leave teeth looking yellow or stained. Professional teeth whitening at BrightSmile is safer and much stronger than store-bought strips, because a dentist checks your teeth first and protects your gums." },
+        { "heading": "Two ways to whiten" },
+        { "subheading": "In-office whitening" },
+        { "paragraph": "One 90-minute visit. We protect your gums, apply a professional whitening gel and activate it in three short rounds. Most patients see their teeth get up to 8 shades whiter in a single appointment." },
+        { "subheading": "Take-home whitening kit" },
+        { "paragraph": "We make custom trays from a quick scan of your teeth. You wear them with whitening gel for 30 to 60 minutes a day for about two weeks." },
+        { "heading": "Is whitening right for me?" },
+        { "paragraph": "Whitening works on natural teeth only. Crowns, veneers and fillings do not change color. We do not recommend whitening during pregnancy or for children under 16. Some people feel mild tooth sensitivity for a day or two, which our desensitizing gel helps." },
+        { "heading": "How long do results last?" },
+        { "paragraph": "Results usually last one to three years. Touch-up gel refills keep your smile bright between treatments." }
+      ]
+    },
+    {
+      "title": "Implants",
+      "slug": "implants",
+      "parent": "services",
+      "blocks": [
+        { "heading": "Replace missing teeth for good" },
+        { "paragraph": "A dental implant is a small titanium post that replaces the root of a missing tooth. Once it bonds with the jawbone, it holds a natural-looking crown that you brush and floss like your own teeth." },
+        { "heading": "The implant process" },
+        { "list": [
+          "Free implant consultation with a 3D cone beam scan to check your bone",
+          "Implant placement, a short procedure done with local anesthetic",
+          "Healing for 3 to 6 months while the implant fuses with the bone",
+          "Your custom crown is attached and your new tooth is complete"
+        ] },
+        { "heading": "Am I a candidate?" },
+        { "paragraph": "Most healthy adults with a missing tooth can get an implant. If the jawbone is too thin, a bone graft can rebuild it first. Smoking and uncontrolled diabetes lower the success rate, so we discuss your health history at the consultation." },
+        { "heading": "Success rate and comfort" },
+        { "paragraph": "Implants placed by Dr. Okafor have a success rate above 95 percent. Most patients say placement feels easier than a tooth extraction, and sedation is available if you feel nervous." },
+        { "heading": "Implant-supported dentures" },
+        { "paragraph": "Missing many teeth? Four to six implants can hold a full arch of teeth securely, with no loose dentures or adhesive." }
+      ]
+    },
+    {
+      "title": "Pricing",
+      "slug": "pricing",
+      "blocks": [
+        { "heading": "Clear prices, no surprises" },
+        { "paragraph": "These are our standard self-pay prices. If you have insurance, your share is usually lower. We always give you a written estimate before any treatment." },
+        { "heading": "Price list" },
+        { "list": [
+          "New patient visit (exam, x-rays and cleaning): $149",
+          "Routine checkup and cleaning: $120",
+          "Emergency exam with x-ray: $89",
+          "Tooth-colored filling: from $150",
+          "Same-day crown: $1,100",
+          "Root canal (front tooth): from $850",
+          "In-office teeth whitening: $399",
+          "Take-home whitening kit: $199",
+          "Single dental implant with crown: from $3,800",
+          "Clear aligners: from $3,900",
+          "Clear aligner and implant consultations: free"
+        ] },
+        { "heading": "Payment plans" },
+        { "paragraph": "For treatment over $500 we offer in-house payment plans with 0% interest over 6 or 12 months. We accept cash, debit and all major credit cards, and HSA or FSA cards." },
+        { "heading": "BrightSmile membership for patients without insurance" },
+        { "paragraph": "Our membership plan costs $29 a month for adults and $19 a month for children. It covers two checkups and cleanings a year, all routine x-rays and one emergency exam, plus 15% off other treatment." }
+      ]
+    },
+    {
+      "title": "Insurance",
+      "slug": "insurance",
+      "blocks": [
+        { "heading": "Using your dental insurance" },
+        { "paragraph": "We are in-network with most PPO dental insurance plans and we file claims for you. Before your first visit, our team verifies your benefits so you know what your plan covers." },
+        { "heading": "Plans we work with" },
+        { "list": [
+          "Most employer and individual PPO plans: in-network",
+          "Out-of-network PPO plans: we still file the claim and you pay only your share",
+          "HMO and DHMO plans: not accepted",
+          "Medicaid: not accepted for adults; children's coverage is checked case by case"
+        ] },
+        { "heading": "What insurance usually covers" },
+        { "paragraph": "Most plans cover two cleanings and checkups a year at 100 percent, fillings at about 80 percent and crowns or implants at about 50 percent, up to a yearly maximum. Cosmetic treatments such as teeth whitening are usually not covered." },
+        { "heading": "No insurance?" },
+        { "paragraph": "Our BrightSmile membership plan and 0% payment plans keep care affordable. See our Pricing page for details." }
+      ]
+    },
+    {
+      "title": "Contact",
+      "slug": "contact",
+      "blocks": [
+        { "heading": "Visit us" },
+        { "paragraph": "BrightSmile Dental, 128 Harbor Lane, Suite 200, Lakeview." },
+        { "heading": "Opening hours" },
+        { "list": [
+          "Monday to Thursday: 8 am to 6 pm",
+          "Friday: 8 am to 2 pm",
+          "Saturday: 9 am to 1 pm",
+          "Sunday: closed"
+        ] },
+        { "heading": "Get in touch" },
+        { "list": [
+          "Phone: (415) 555-0142",
+          "WhatsApp: +1 415 555 0142",
+          "Email: hello@brightsmile.example",
+          "After-hours emergency line: (415) 555-0199"
+        ] },
+        { "heading": "Parking and getting here" },
+        { "paragraph": "Free patient parking is available in the lot behind the building, with two accessible spaces next to the entrance. Bus lines 12 and 31 stop on Harbor Lane, one block away. The clinic is on the second floor and the building has an elevator." }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are you accepting new patients?",
+      "answer": "Yes! We welcome new patients of all ages and usually have openings within the same week. You can call, message us on WhatsApp or ask the chat assistant to request an appointment."
+    },
+    {
+      "question": "Do you see children?",
+      "answer": "Yes. We see kids from age 2. We recommend a first visit by age 2 or 3 so your child gets comfortable with the dentist. Parents are welcome to stay in the room."
+    },
+    {
+      "question": "What should I do in a dental emergency?",
+      "answer": "Call us right away at (415) 555-0142. We keep time free every day for same-day emergency visits. Outside office hours, call our emergency line at (415) 555-0199. If a tooth is knocked out, keep it moist in milk and come in within an hour."
+    },
+    {
+      "question": "Do you offer payment plans?",
+      "answer": "Yes. For treatment over $500 we offer in-house payment plans with 0% interest over 6 or 12 months, with no credit check."
+    },
+    {
+      "question": "How often should I get a dental cleaning?",
+      "answer": "Most people should have a checkup and professional cleaning every six months. Patients with gum disease may need a deep cleaning visit every three or four months."
+    },
+    {
+      "question": "I get nervous at the dentist. Can you help?",
+      "answer": "Absolutely. Tell us how you feel and we will go at your pace. We offer laughing gas (nitrous oxide) and mild oral sedation, noise-cancelling headphones and breaks whenever you need them."
+    },
+    {
+      "question": "Does whitening work on crowns or veneers?",
+      "answer": "No. Whitening gel only lightens natural tooth enamel. Crowns, veneers and fillings keep their color, so we may suggest whitening first and matching new crowns or veneers to your brighter shade."
+    },
+    {
+      "question": "How long is the first appointment?",
+      "answer": "Plan for about 90 minutes. That covers your medical history, digital x-rays, a full exam, a cleaning and time to talk through any treatment you may need."
+    },
+    {
+      "question": "What is your cancellation policy?",
+      "answer": "Please give us at least 24 hours notice if you need to cancel or reschedule. Late cancellations and missed appointments may have a $50 fee."
+    },
+    {
+      "question": "Are you open on Saturdays?",
+      "answer": "Yes, we are open on Saturday from 9 am to 1 pm. Saturday slots fill quickly, so book a week or two ahead. We are closed on Sundays."
+    },
+    {
+      "question": "Do you offer clear aligners instead of braces?",
+      "answer": "Yes. We offer clear aligners for teens and adults. Treatment usually takes 6 to 18 months. The consultation with a 3D scan is free."
+    },
+    {
+      "question": "What if I don't have dental insurance?",
+      "answer": "You can join the BrightSmile membership plan for $29 a month (adults) or $19 a month (children). It includes two cleanings and checkups a year, x-rays and 15% off treatment."
+    },
+    {
+      "question": "Are dental x-rays safe?",
+      "answer": "Yes. We use digital x-rays, which use up to 80% less radiation than old film x-rays. We only take x-rays when they are needed and we use a protective collar."
+    },
+    {
+      "question": "Can I have a root canal and a crown on the same day?",
+      "answer": "Often, yes. Dr. Okafor performs root canals in our clinic, and our in-house milling unit can make a same-day crown, so many patients finish both in one longer visit."
+    },
+    {
+      "question": "Do you treat bad breath or bleeding gums?",
+      "answer": "Yes. Bleeding gums and bad breath are often signs of gum disease. We check your gums at every visit and offer deep cleanings (scaling and root planing) to treat it."
+    }
+  ]
+}

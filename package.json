@@ -1,0 +1,13 @@
+{
+  "name": "sitesage-chat",
+  "private": true,
+  "description": "Tests for the SiteSage Chat widget copy and the GitHub Pages preview. No build step.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/js/*.test.js",
+    "sync-docs": "cp assets/js/widget.js docs/assets/js/sitesage-widget.js && cp assets/css/widget.css docs/assets/css/sitesage-widget.css"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

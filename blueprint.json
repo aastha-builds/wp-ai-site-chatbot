@@ -1,0 +1,43 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "SiteSage Chat demo: BrightSmile Dental",
+		"description": "Installs SiteSage Chat from GitHub, imports the fictional BrightSmile Dental content, turns demo mode on and opens the homepage with the chat open. No API key needed.",
+		"author": "aastha-builds",
+		"categories": [ "AI", "Chatbot" ]
+	},
+	"landingPage": "/?sitesage_open=1",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"steps": [
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"SITESAGE_DEMO_MODE": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/aastha-builds/wp-ai-site-chatbot",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "sitesage-chat"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp sitesage demo import --with-leads --remove-sample-content"
+		}
+	]
+}

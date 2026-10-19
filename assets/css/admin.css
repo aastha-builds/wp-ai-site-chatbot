@@ -1,0 +1,158 @@
+/* SiteSage Chat admin screens. */
+
+.sitesage-admin .sitesage-lead {
+	max-width: 760px;
+	color: #50575e;
+	font-size: 14px;
+}
+
+.sitesage-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 16px;
+	max-width: 1100px;
+	margin: 18px 0;
+}
+
+.sitesage-card {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 16px 18px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+}
+
+.sitesage-card__label {
+	color: #50575e;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.sitesage-card__value {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.sitesage-card__value--small {
+	font-size: 16px;
+	word-break: break-all;
+}
+
+.sitesage-card__meta {
+	color: #646970;
+	font-size: 13px;
+}
+
+.sitesage-badge {
+	align-self: flex-start;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.sitesage-badge.is-demo {
+	background: #fcf0d4;
+	color: #6e4a00;
+}
+
+.sitesage-badge.is-live {
+	background: #d8f3e3;
+	color: #0b5a2c;
+}
+
+.sitesage-panel {
+	max-width: 1100px;
+	margin: 0 0 18px;
+	padding: 4px 20px 14px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+}
+
+.sitesage-panel h2 {
+	margin: 14px 0 6px;
+}
+
+.sitesage-panel .form-table th {
+	width: 220px;
+}
+
+.sitesage-panel form .button {
+	margin-right: 6px;
+}
+
+.sitesage-warning {
+	color: #8a2424;
+	font-weight: 600;
+}
+
+.sitesage-inline {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.sitesage-inline-form {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 12px 0 4px;
+}
+
+.sitesage-table {
+	max-width: 1100px;
+}
+
+.sitesage-table .num {
+	width: 56px;
+	text-align: right;
+}
+
+.sitesage-eval td:nth-child(2) {
+	width: 38%;
+}
+
+.sitesage-result,
+.sitesage-status {
+	display: inline-block;
+	padding: 2px 9px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.sitesage-result.is-pass,
+.sitesage-status.is-sent {
+	background: #d8f3e3;
+	color: #0b5a2c;
+}
+
+.sitesage-result.is-fail,
+.sitesage-status.is-failed {
+	background: #fbe3e4;
+	color: #8a2424;
+}
+
+.sitesage-status.is-skipped {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.sitesage-meter {
+	display: block;
+	height: 8px;
+	overflow: hidden;
+	background: #f0f0f1;
+	border-radius: 999px;
+}
+
+.sitesage-meter span {
+	display: block;
+	height: 100%;
+	background: #00a32a;
+}

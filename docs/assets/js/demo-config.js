@@ -1,0 +1,38 @@
+/**
+ * Widget settings for the GitHub Pages preview. Same widget as the plugin,
+ * but transport "demo" answers from data/answers.json in the browser.
+ */
+window.SiteSageConfig = {
+	transport: 'demo',
+	botName: 'BrightSmile Assistant',
+	greeting: "Hi! I'm the BrightSmile assistant. Ask me about treatments, prices, insurance or booking a visit.",
+	suggestions: [ 'How much is teeth whitening?', 'Do you take my insurance?', 'What should I bring to my first visit?' ],
+	brandColor: '#0e7c86',
+	maxLength: 500,
+	leadAfterQuestions: 2,
+	intentWords: [ 'book', 'appointment', 'price', 'pricing' ],
+	handoff: { type: 'whatsapp', url: 'https://wa.me/14155550142', label: 'Talk to a person' },
+	demoMode: true,
+	i18n: {
+		open: 'Open chat',
+		close: 'Close chat',
+		placeholder: 'Type your question…',
+		send: 'Send',
+		typing: 'Assistant is typing',
+		sources: 'Sources',
+		error: 'Sorry, something went wrong. Please try again.',
+		tooLong: 'That message is too long.',
+		leadTitle: 'Want us to follow up?',
+		leadIntro: 'Leave your details and our team will contact you.',
+		name: 'Name',
+		phone: 'Phone',
+		email: 'Email',
+		submit: 'Send details',
+		noThanks: 'No thanks',
+		leadThanks: 'Thanks! Our team will get back to you soon.',
+		leadPrivacy: 'Preview: details stay in your browser. Nothing is sent.',
+		demoBadge: 'Interactive preview with sample data',
+		poweredBy: 'Answers come from this website’s content.',
+		requiredField: 'Please fill in all fields.',
+	},
+};

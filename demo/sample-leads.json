@@ -1,0 +1,8 @@
+[
+  { "name": "Jordan Avery", "phone": "(415) 555-0107", "email": "jordan.avery@example.com", "question": "How much does teeth whitening cost?", "page": "services/teeth-whitening/", "webhook_status": "sent", "minutes_ago": 42 },
+  { "name": "Priya Nandakumar", "phone": "(415) 555-0118", "email": "priya.n@example.com", "question": "Can I book an appointment for Saturday?", "page": "contact/", "webhook_status": "sent", "minutes_ago": 190 },
+  { "name": "Marcus Lindqvist", "phone": "(415) 555-0123", "email": "m.lindqvist@example.net", "question": "How much is a dental implant?", "page": "services/implants/", "webhook_status": "sent", "minutes_ago": 1460 },
+  { "name": "Sofia Herrera", "phone": "(415) 555-0131", "email": "sofia.herrera@example.org", "question": "Do you take my PPO insurance?", "page": "insurance/", "webhook_status": "failed", "minutes_ago": 2910 },
+  { "name": "Daniel Okoro", "phone": "(415) 555-0146", "email": "dokoro@example.com", "question": "Do you see kids?", "page": "", "webhook_status": "sent", "minutes_ago": 4380 },
+  { "name": "Hannah Weiss", "phone": "(415) 555-0152", "email": "hannah.weiss@example.com", "question": "What are the prices for clear aligners?", "page": "pricing/", "webhook_status": "skipped", "minutes_ago": 7200 }
+]

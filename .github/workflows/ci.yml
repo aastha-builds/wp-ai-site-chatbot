@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  php:
+    name: PHP ${{ matrix.php }} unit tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '7.4', '8.3' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2
+      - run: composer install --no-interaction --no-progress
+      - run: vendor/bin/phpunit
+      - name: WordPress Coding Standards
+        if: matrix.php == '8.3'
+        run: vendor/bin/phpcs
+
+  js:
+    name: Widget and GitHub Pages preview tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm test
+      - name: Pages copy of the widget is in sync
+        run: |
+          cmp assets/js/widget.js docs/assets/js/sitesage-widget.js
+          cmp assets/css/widget.css docs/assets/css/sitesage-widget.css
+      - name: Blueprint is valid JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('blueprint.json','utf8'))"
+
+  integration:
+    name: End-to-end in WordPress (SQLite)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_sqlite, sqlite3, mbstring
+          coverage: none
+      - name: Install WP-CLI
+        run: |
+          curl -sSLo wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          chmod +x wp-cli.phar
+          sudo mv wp-cli.phar /usr/local/bin/wp
+      - run: bin/integration-test.sh
